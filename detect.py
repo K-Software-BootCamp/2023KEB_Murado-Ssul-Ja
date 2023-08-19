@@ -33,6 +33,10 @@ import os
 import platform
 import sys
 from pathlib import Path
+import cv2
+from pytesseract import Output
+import pytesseract
+from PIL import Image
 
 import torch
 
@@ -103,7 +107,8 @@ def run(
     # Dataloader
     bs = 1  # batch_size
     if webcam:
-        view_img = check_imshow(warn=True)
+        #view_img = check_imshow(warn=True)
+        view_img = 1
         dataset = LoadStreams(source, img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
         bs = len(dataset)
     elif screenshot:
@@ -162,6 +167,23 @@ def run(
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
+                    x1 = int(xyxy[0].item())
+                    y1 = int(xyxy[1].item())
+                    x2 = int(xyxy[2].item())
+                    y2 = int(xyxy[3].item())
+                    
+                    crops = imc[int(xyxy[1]):int(xyxy[3]), int(xyxy[0]):int(xyxy[2])]
+                    black_image = cv2.cvtColor(crops, cv2.COLOR_BGR2GRAY)
+                    _, binary_frame = cv2.threshold(black_image, 150, 255, cv2.THRESH_BINARY)
+                    #inverted_black = cv2.bitwise_not(black_image)
+                    text1 = pytesseract.image_to_string(black_image)
+                    text2 = pytesseract.image_to_string(binary_frame)
+                    cv2.imshow('black', black_image)
+                    #cv2.imshow('inverted', inverted_black)
+                    cv2.imshow('binary', binary_frame)
+                    print('black', text1)
+                    print('binary', text2)
+                    
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
                         line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
@@ -170,6 +192,7 @@ def run(
 
                     if save_img or save_crop or view_img:  # Add bbox to image
                         c = int(cls)  # integer class
+                        hide_labels = 1
                         label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
                         annotator.box_label(xyxy, label, color=colors(c, True))
                     if save_crop:
