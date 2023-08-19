@@ -37,6 +37,7 @@ import cv2
 from pytesseract import Output
 import pytesseract
 from PIL import Image
+import re
 
 import torch
 
@@ -175,14 +176,13 @@ def run(
                     crops = imc[int(xyxy[1]):int(xyxy[3]), int(xyxy[0]):int(xyxy[2])]
                     black_image = cv2.cvtColor(crops, cv2.COLOR_BGR2GRAY)
                     _, binary_frame = cv2.threshold(black_image, 150, 255, cv2.THRESH_BINARY)
-                    #inverted_black = cv2.bitwise_not(black_image)
-                    text1 = pytesseract.image_to_string(black_image)
-                    text2 = pytesseract.image_to_string(binary_frame)
-                    cv2.imshow('black', black_image)
-                    #cv2.imshow('inverted', inverted_black)
+                    bus_number = pytesseract.image_to_string(binary_frame)
+                    # Error when using youtube link
+                    #result = re.sub(r'[^0-9]', '', bus_number)
+                    result = re.findall(r'\d+', bus_number)
                     cv2.imshow('binary', binary_frame)
-                    print('black', text1)
-                    print('binary', text2)
+                    print('busNum', bus_number)
+                    print('result', result)
                     
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
@@ -228,7 +228,7 @@ def run(
                     vid_writer[i].write(im0)
 
         # Print time (inference-only)
-        LOGGER.info(f"{s}{'' if len(det) else '(no detections), '}{dt[1].dt * 1E3:.1f}ms")
+        # LOGGER.info(f"{s}{'' if len(det) else '(no detections), '}{dt[1].dt * 1E3:.1f}ms")
 
     # Print results
     t = tuple(x.t / seen * 1E3 for x in dt)  # speeds per image
