@@ -2,3 +2,7 @@
 
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/bb25f83b-5842-4663-bee1-76c31e370f03)
 
+
+```
+!python3 detect.py --werights best.pt --source <img, video, webcam, youtube link> 
+```
