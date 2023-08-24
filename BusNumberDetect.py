@@ -55,6 +55,15 @@ from utils.general import (LOGGER, Profile, check_file, check_img_size, check_im
                            increment_path, non_max_suppression, print_args, scale_boxes, strip_optimizer, xyxy2xywh)
 from utils.torch_utils import select_device, smart_inference_mode
 
+bus_num_1 = ['5', '6', '1', '8'] # 5618
+bus_num_2 = ['1', '6', '2'] #162
+bus_num_3 = ['8', '5', '0', '7'] #8507
+bus_num_4 = ['3', '9', '0'] #390
+bus_num_5 = ['7', '3'] #73
+bus_num_6 = ['2', '2', '0'] #220
+bus_num_7 = ['6', '0', '2'] #602
+bus_num_8 = ['9', '0', '0', '7'] #9007
+bus_num_9 = ['9', '4', '0', '8'] #9408
 
 @smart_inference_mode()
 def run(
@@ -184,7 +193,29 @@ def run(
                     print('busNum', bus_number)
                     print('result', result)
 
-                    with serial.Serial('/dev/ttyACM0', 115200)
+                    with serial.Serial('/dev/ttyACM0', 115200, timeout=10) as ser: #communication with arduino
+                        while True:
+                            if result == bus_num_1:
+                                ser.write(bytes('1', 'utf-8'))
+                            elif result == bus_num_2:
+                                ser.write(bytes('2', 'utf-8'))
+                            elif result == bus_num_3:
+                                ser.write(bytes('3', 'utf-8'))
+                            elif result == bus_num_4:
+                                ser.write(bytes('4', 'utf-8'))
+                            elif result == bus_num_5:
+                                ser.write(bytes('5', 'utf-8'))
+                            elif result == bus_num_6:
+                                ser.write(bytes('6', 'utf-8'))
+                            elif result == bus_num_7:
+                                ser.write(bytes('7', 'utf-8'))
+                            elif result == bus_num_8:
+                                ser.write(bytes('8', 'utf-8'))
+                            elif result == bus_num_9:
+                                ser.write(bytes('9', 'utf-8'))
+                            else:
+                                pass
+
                     
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
