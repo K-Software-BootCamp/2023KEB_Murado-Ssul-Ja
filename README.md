@@ -1,6 +1,6 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
-💻 ## 시연 자료
+## :computer:시연 자료
 - 버스 번호 추론
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
 - 원본사진 -> 흑백 -> 이진화
