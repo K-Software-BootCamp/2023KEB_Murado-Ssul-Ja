@@ -1,9 +1,12 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
 ### 시연 자료: 
+1. 버스 번호 추론
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
+2. 원본사진 -> 흑백 -> 이진화
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/a411b59b-2423-40be-a90a-75347a14a1b6)
-![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/1a97fbe4-b8e5-4c4b-9d5d-76217598211e)
+3. 버스 번호 출력
+![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/5b9aab3f-cee8-42c6-ad8b-5580cace3897)
 
 
 ### 프로젝트 흐름도:
