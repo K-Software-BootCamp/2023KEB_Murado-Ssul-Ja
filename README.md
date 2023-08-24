@@ -16,10 +16,30 @@
 # 프로젝트 선정 동기 
 
 
-# 실행 명령어
+# 사용법
+1. BusNumber Detection 모델인 best.pt 파일과 BusNumberDetect.py 파일 다운로드
 ```
-!python3 detect.py --werights best.pt --source <img, video, webcam, youtube link> 
+git clone git@github.com:K-Software-BootCamp/2023KEB_Murado-Ssul-Ja.git
 ```
+
+2. Yolov5 설치
+```
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+pip install -r requirements.txt
+```
+
+3. BusNumberDetect.py 파일과 best.pt 파일을 경로에 맞게 이동
+```
+mv ~/2023KEB_Murado-Ssul-Ja/BusNumberDetect.py /yolov5
+mv ~/2023KEB_Murado-Ssul-Ja/best.pt /yolov5
+```
+
+4. 버스가 나오는 이미지나 유튜브 링크를 source로 사용하여 BusNumberDetect.py 실행
+```
+!python3 BusNumberDetect.py --werights best.pt --source <img, video, webcam, youtube link> 
+```
+
 
 ## Acknowledgement
 ```
