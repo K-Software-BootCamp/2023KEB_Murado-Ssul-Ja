@@ -10,7 +10,7 @@
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/5b9aab3f-cee8-42c6-ad8b-5580cace3897)
 
 
-## 프로젝트 흐름도:
+## 프로젝트 흐름도
 <img width="505" alt="image" src="https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/140637787/f5a5c66a-3be8-4296-8607-1a6d311cad27">
 
   1. 아두이노 젯슨에 연결된 카메라를 통해 정류장으로 진입하는 영상을 촬영한다.
