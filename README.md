@@ -15,8 +15,8 @@
 ## ♻️프로젝트 흐름도
 <img width="505" alt="image" src="https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/140637787/f5a5c66a-3be8-4296-8607-1a6d311cad27">
 
-  :one: 아두이노 젯슨에 연결된 카메라를 통해 정류장으로 진입하는 영상을 촬영한다.
-  
+  :one: 아두이노 젯슨에 연결된 카메라를 통해 정류장으로 진입하는 영상을 촬영한다. \n
+
   :two: 젯슨의 docker container에 있는 yolov5 모델을 이용하여 버스 번호를 detection한다.
   
   3️⃣ pyserial 라이브러리를 활요하여 젯슨에서 아두이노로 시리얼 통신을 통해 detection된 데이터를 전송한다.
