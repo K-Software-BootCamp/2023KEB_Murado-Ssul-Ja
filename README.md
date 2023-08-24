@@ -1,6 +1,6 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
-###Stack
+:book:Stack
 
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
 ## :computer: 시연 자료
