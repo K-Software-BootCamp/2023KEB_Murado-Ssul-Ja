@@ -38,7 +38,7 @@ from pytesseract import Output
 import pytesseract
 from PIL import Image
 import re
-
+import serial
 import torch
 
 FILE = Path(__file__).resolve()
@@ -183,6 +183,8 @@ def run(
                     cv2.imshow('binary', binary_frame)
                     print('busNum', bus_number)
                     print('result', result)
+
+                    with serial.Serial('/dev/ttyACM0', 115200)
                     
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
