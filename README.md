@@ -1,6 +1,6 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
-### 시연 자료
+## 시연 자료
 ---
 1. 버스 번호 추론
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
@@ -10,7 +10,7 @@
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/5b9aab3f-cee8-42c6-ad8b-5580cace3897)
 
 
-### 프로젝트 흐름도:
+## 프로젝트 흐름도:
 <img width="505" alt="image" src="https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/140637787/f5a5c66a-3be8-4296-8607-1a6d311cad27">
 
   1. 아두이노 젯슨에 연결된 카메라를 통해 정류장으로 진입하는 영상을 촬영한다.
@@ -20,13 +20,13 @@
   5. 이용자는 아두이노에 있는 이어폰 단자를 이용하여 간편하게 버스 번호를 알려주는 음성 정보를 얻는다.
 
 
-# 프로젝트 선정 동기 
+## 프로젝트 선정 동기 
 
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/140637787/dfa1cdb4-e052-4992-b6c7-198d07259e2f)
 
 위 자료에서 알 수 있듯이, 시각 장애인이 이용하기 가장 힘든 교통수단은 버스이며 그 이유는 그들이 버스 번호를 인식하기 힘들다는 것이다. 그래서, 우리는 AI와 기술을 통해 교통약자들의 문제를 해결하자는 목표를 갖고 해당 프로젝트 주제를 선정했다.
 
-# 사용법
+## 사용법
 1. BusNumber Detection 모델인 best.pt 파일과 BusNumberDetect.py 파일 다운로드
 ```
 git clone git@github.com:K-Software-BootCamp/2023KEB_Murado-Ssul-Ja.git
@@ -51,7 +51,7 @@ mv ~/2023KEB_Murado-Ssul-Ja/best.pt /yolov5
 ```
 
 
-## Acknowledgement
+### Acknowledgement
 ```
 "본 연구는 과학기술정보통신부 및 정보통신기획평가원의 SW전문인재양성사업의 연구결과로 수행되었음"(2022-0-01127)
 ```
