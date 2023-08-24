@@ -1,8 +1,8 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
 ### 시연 자료: 
-![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/d44af3d6-4f5b-4f77-9d88-8bc3292e91bc)
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
+![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/a411b59b-2423-40be-a90a-75347a14a1b6)
 
 
 ### 프로젝트 흐름도:
