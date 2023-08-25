@@ -1,8 +1,5 @@
 # AI를 통한 시각장애인 대중교통 접근성 향상 프로젝트
 
-#🛠️Stack
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"><img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=black"><img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-
 ## :computer: 시연 자료
 1️⃣버스 번호 추론
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
@@ -55,6 +52,9 @@ mv ~/2023KEB_Murado-Ssul-Ja/best.pt /yolov5
 ```
 !python3 BusNumberDetect.py --werights best.pt --source <img, video, webcam, youtube link> 
 ```
+
+# 🛠️ Tech Stack
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"><img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=black"><img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
 
 
 ### 🔸Acknowledgement
