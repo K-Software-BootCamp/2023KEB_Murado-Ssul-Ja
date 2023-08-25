@@ -5,7 +5,7 @@
 1️⃣버스 번호 추론
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/b38f67d5-99b2-4821-b971-102ebddc6eef)
 2️⃣원본사진 -> 흑백 -> 이진화
-![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/a411b59b-2423-40be-a90a-75347a14a1b6)asdasd 
+![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/a411b59b-2423-40be-a90a-75347a14a1b6)     
 3️⃣버스 번호 출력
 ![image](https://github.com/K-Software-BootCamp/2023KEB_Murado-Ssul-Ja/assets/108107570/5b9aab3f-cee8-42c6-ad8b-5580cace3897)
 
